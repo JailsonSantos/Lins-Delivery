@@ -1,0 +1,37 @@
+CRIANDO UM CONTAINER PARA CRIAR UM BANCO DE DADOS EM POSTGRES
+docker run --name nodejscontainer -e POSTGRES_USER=admin -e POSTGRES_PASSWORD=admin -e POSTGRES_DB=ignitenodejs -p 5432:5432 -d postgres
+
+Dependencias
+
+yarn add typescript ts-node-dev @types/express @types/jsonwebtoken @types/bcrypt prisma -D
+yarn add express
+yarn add bcrypt
+yarn add jsonwebtoken
+yarn add @prisma/client
+yarn tsc --init
+
+yarn prisma init
+
+yarn prisma migrate dev
+
+Enter a name for the new migration: create_deliveryman
+
+
+
+yarn prisma migrate dev
+
+Enter a name for the new migration: create_client
+
+yarn prisma format
+
+
+yarn prisma migrate dev
+
+Enter a name for the new migration: create_deliveries
+
+yarn prisma migrate dev
+Enter a name for the new migration: update_deliveries_table
+
+
+yarn dev
+
